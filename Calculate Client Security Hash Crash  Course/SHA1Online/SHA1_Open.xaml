@@ -1,0 +1,123 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_Open" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_SHA1URL" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>SHA1_Open_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SHA1_Open" sap:VirtualizedContainerService.HintSize="1276,394" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: SHA256 Generator - Generate SHA256 Hash | KeyCDN Tools" sap:VirtualizedContainerService.HintSize="451,371" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9f81ff32-1f28-4619-aac1-ca2bce916d0c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,91" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="f80441190894aa0bb8525b61c762fb35.jpg" Selector="&lt;html app='chrome.exe' title='SHA256 Generator - Generate SHA256 Hash | KeyCDN Tools' /&gt;" Title="SHA256 Generator - Generate SHA256 Hash | KeyCDN Tools" Url="[in_SHA1URL]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
